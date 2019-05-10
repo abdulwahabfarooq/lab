@@ -16,10 +16,9 @@ int main()
         cin>>bt[i];
         cout<<"Priority:";
         cin>>pr[i];
-        p[i]=i+1;           //contains process number
+        p[i]=i+1;         
     }
  
-    //sorting burst time, priority and process number in ascending order using selection sort
     for(i=0;i<n;i++)
     {
         pos=i;
@@ -42,7 +41,7 @@ int main()
         p[pos]=temp;
     }
  
-    wt[0]=0;            //waiting time for first process is zero
+    wt[0]=0;            
  
     //calculate waiting time
     for(i=1;i<n;i++)
@@ -54,7 +53,7 @@ int main()
         total+=wt[i];
     }
  
-    avg_wt=total/n;      //average waiting time
+    avg_wt=total/n;      
     total=0;
  
     cout<<"\nProcess\t    Burst Time    \tWaiting Time\tTurnaround Time";
